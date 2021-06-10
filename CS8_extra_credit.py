@@ -1,3 +1,6 @@
+#Rachel Ki, CS 8 (S21)
+
+import copy
 
 def seize_cure(grid):
     '''
