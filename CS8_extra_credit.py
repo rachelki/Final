@@ -96,8 +96,7 @@ def get_hotspots(new_grid, cnt_item, diag=False):
             if count >= max_count:  # found a new hotspot
                 position = (r, c)
                 max_count = count
-                # print("newMax:" + str(max_count))  # for debug
-                # print(position)  # for debug
+                          
             count = 0
     return position
 
