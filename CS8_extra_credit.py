@@ -29,8 +29,7 @@ def seize_cure(grid):
                 if (surrounded == True): # surrounded by vamp. Need to update input grid.
                     new_grid[r][c] = 1
                     return_val = True
-    print("new_grid---")
-    print_list(new_grid)  # print the new grid for debug
+    
     return return_val
 
 
