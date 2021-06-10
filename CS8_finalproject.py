@@ -156,7 +156,7 @@ def days_remaining_2(grid):
     '''
 
     if (len(grid) < 1) or (len(grid[0]) < 2):  # handle empty and single list
-        return None  # changed to 'None' for NOT confusing '-1' return value which is for any human remain in the grid.
+        return -1  # return -1 when empty list
     num_day = 0  # the starting day
     all_vampire = True  # default value for No human in the grid.
     show_city_each_day(grid, num_day)  # show the city on day 0
@@ -192,7 +192,7 @@ def days_remaining_3(grid):
     '''
 
     if (len(grid) < 1) or (len(grid[0]) < 2):  # handle empty and single list
-        return None  # changed to 'None' for NOT confusing '-1' return value which is for any human remain in the grid.
+        return -1  # return -1 when empty list
     num_day = 0  # the starting day
     all_vampire = True  # default value for No human in the grid.
     show_city_each_day(grid, num_day)  # show the city on day 0
