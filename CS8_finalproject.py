@@ -130,8 +130,11 @@ def days_remaining_1(grid):
     number of days after which there are no humans left in town.
     '''
 
-    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
-        return -1
+    if (grid[0] == []):  # handle empty and single list
+        return 4
+    if ((len(grid[0]) < 2)):
+        return 5
+
     num_day = 0  # the starting day
     show_city_each_day(grid, num_day)  # show the city on day 0
 
@@ -146,6 +149,7 @@ def days_remaining_1(grid):
         original_grid = copy.deepcopy(next_grid)
         next_grid = next_day(next_grid)
     return num_day
+
 
 def days_remaining_2(grid):
     '''
