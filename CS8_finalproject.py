@@ -130,8 +130,9 @@ def days_remaining_1(grid):
     number of days after which there are no humans left in town.
     '''
 
-    if (grid[0] == []):  # handle empty and single list
-        return 4
+    ]if (len(grid)>= 1):  # handle empty and single list
+        if(grid[0] == []):
+            return 4
     if ((len(grid[0]) < 2)):
         return 5
 
