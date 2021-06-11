@@ -33,11 +33,8 @@ def vampirize(grid, position):
     r = position[0]  # row
     c = position[1]  # column
 
-    if (len(grid) >= 1):
-        if (grid[0] == []):  # handle empty
-            return -1
-        if len(grid[0]) == 1 and len(grid) == 1:  # handle single
-            return -1
+    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+        return grid
     if (r < 0) or (r >= len(grid)) or (c < 0) or (c >= len(grid[0])):  # handle position coordinates(U,D,L,R)
         return None
 
