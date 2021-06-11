@@ -33,11 +33,10 @@ def vampirize(grid, position):
     r = position[0]  # row
     c = position[1]  # column
 
-    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
         return -1
     if (r < 0) or (r >= len(grid)) or (c < 0) or (c >= len(grid[0])):  # handle position coordinates(U,D,L,R)
         return None
-
     # changing human into vampire from the entered position (up/down/left/right)
     if ((r - 1) >= 0) and (new_grid[r - 1][c] == 0):  # up
         new_grid[r - 1][c] = 1
@@ -55,7 +54,7 @@ def next_day(grid):
     return: a new 2D grid representing the state of the city next day.
     '''
 
-    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
         return grid
     new_grid = copy.deepcopy(grid)  # make a copy of the provided grid for updates
     # vampirization done by cells with vampires.
@@ -73,7 +72,7 @@ def show_city_each_day(grid, num_day):
     Display H:human, V:vampire, W:wall, P:healer
     '''
 
-    if (len(grid) < 1):  # handle empty grid
+    if (len(grid[0]) < 1):  # handle empty grid
         return -1
     print("Day " + str(num_day) + ":")  # print number of day
     for r in range(len(grid)):
@@ -103,7 +102,7 @@ def cure(grid, position):
     r = position[0]  # row
     c = position[1]  # column
 
-    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
         return -1
     if (r < 0) or (r >= len(grid)) or (c < 0) or (c >= len(grid[0])):  # handle position coordinates(U,D,L,R)
         return None
@@ -131,7 +130,7 @@ def days_remaining_1(grid):
     number of days after which there are no humans left in town.
     '''
 
-    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
         return -1
     num_day = 0  # the starting day
     show_city_each_day(grid, num_day)  # show the city on day 0
@@ -156,7 +155,7 @@ def days_remaining_2(grid):
     Otherwise, return -1 (NOT all humans were converted to vampires.)
     '''
 
-    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
         return -1  # return -1 when empty list
     num_day = 0  # the starting day
     all_vampire = True  # default value for No human in the grid.
@@ -192,7 +191,7 @@ def days_remaining_3(grid):
     Otherwise, return -1 (NOT all humans were converted to vampires.)
     '''
 
-    if (len(grid) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
+    if (len(grid[0]) < 1) or (len(grid[0]) and len(grid) < 2):  # handle empty and single list
         return -1  # return -1 when empty list
     num_day = 0  # the starting day
     all_vampire = True  # default value for No human in the grid.
