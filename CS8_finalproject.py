@@ -152,6 +152,7 @@ def days_remaining_2(grid):
     '''
     Given a matrix representing the city, returns the shortest
     number of days after which there are no humans left in town.
+    The input grid may include 2(Walls) along with 0(Human) and 1(Vampire)
     Otherwise, return -1 (NOT all humans were converted to vampires.)
     '''
 
@@ -187,6 +188,7 @@ def days_remaining_3(grid):
     '''
     Given a matrix representing the city, returns the shortest
     number of days after which there are no humans left in town.
+    The grid may include 3(Healer) along with 2(Walls), 0(Human), and 1(Vampire)
     Otherwise, return -1 (NOT all humans were converted to vampires.)
     '''
 
